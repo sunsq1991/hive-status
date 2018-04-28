@@ -18,19 +18,19 @@ function setPlug (action) {
 
 function checkRig(data, rig) {
   const rigStatus =  _.get(data, 'result.rigs.' + rig.Id);
-  console.log('rigStatus', rigStatus);
+  console.log('rig status:', rigStatus);
   if (rigStatus && !rigStatus.raw_stats && rigStatus.ts_last_update) {
     const offTime = new Date(rigStatus.ts_last_update * 1000);
     const nowDatetimeValue = (new Date()).valueOf();
     console.log(offTime, nowDatetimeValue - offTime);
 
-    if ((nowDatetimeValue - offTime) > (1 * 60000)) {
+    if ((nowDatetimeValue - offTime) > (8 * 60000)) {
       console.log('off plug here');
       setPlug('off' + rig.plugId);
       setTimeout(function () {
         console.log('on plug here');
         setPlug('on1' + rig.plugId);
-      }, 20000);
+      }, 15000);
     }
   }
 }
