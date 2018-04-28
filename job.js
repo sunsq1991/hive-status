@@ -29,7 +29,7 @@ function checkRig(data, rig) {
       setPlug('off' + rig.plugId);
       setTimeout(function () {
         console.log('on plug here');
-        setPlug('on1' + rig.plugId);
+        setPlug('on' + rig.plugId);
       }, 15000);
     }
   }
