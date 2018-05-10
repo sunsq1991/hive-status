@@ -4,7 +4,8 @@ var request = require('request');
 
 const rigs = [
   {Id: 58899, plugId: 1},
-  {Id: 58674, plugId: 2}
+  {Id: 58674, plugId: 2},
+  {Id: 62161, plugId: 3}
 ];
 
 const secret = '5504c6b399264aa848a368183cb507b2aba7f33d3db4e07c5c01c2d5b0184d1e'
