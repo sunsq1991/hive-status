@@ -13,7 +13,7 @@
         <h4 class="modal-title">哈哈哈哈哈</h4>
       </div>
       <div class="modal-body">
-        <p>Hey,小姐姐</p>
+        <p>Hey,<span id="usrname"></span></p>
         <h3>喜欢我吗？</h3>
       </div>
       <div class="modal-footer">
@@ -24,8 +24,24 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-</body>
-</html>
+
 <script type="text/javascript">
+  var usrname = '小姐姐';
+  if (window.location.hash && window.location.hash.substr(1)) {
+    var usrname = decodeURIComponent(window.location.hash.substr(1));
+  }
+
+  $('#usrname').text(usrname)
   $('#myModal').modal('show')
 </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120846759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120846759-1');
+</script>
+</body>
+</html>
