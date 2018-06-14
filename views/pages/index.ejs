@@ -31,8 +31,11 @@
     var usrname = decodeURIComponent(window.location.hash.substr(1));
   }
 
-  $('#usrname').text(usrname)
-  $('#myModal').modal('show')
+  $('#usrname').text(usrname);
+  $('#myModal').modal('show');
+  window.onhashchange = function() {
+    window.location.reload()
+  }
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120846759-1"></script>
